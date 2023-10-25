@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  test.conf: |
+    server {
+        listen       80;
+        server_name  _;
+        location / {
+            proxy_pass $(cat /etc/nginx/proxy_pass_url);
+        }
+    }
+
