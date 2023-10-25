@@ -18,12 +18,7 @@ spec:
         volumeMounts:
         - name: nginx-config
           mountPath: /etc/nginx/sites-enabled
-        - name: nginx-secret-volume
-          mountPath: /etc/test
       volumes:
       - name: nginx-config
         configMap:
           name: nginx-config
-      - name: nginx-secret-volume
-        secret:
-          secretName: nginx-secret
