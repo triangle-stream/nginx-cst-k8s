@@ -17,7 +17,7 @@ def serve_m3u8_playlist(folder):
     configure_logging(ip, user_agent)
 
     # Determine the path to the requested M3U8 playlist on the server
-    playlist_path = os.path.join('/Users/marco/storage', folder, 'master.m3u8')
+    playlist_path = os.path.join('/storage', folder, 'master.m3u8')
 
     if os.path.isfile(playlist_path):
         # Read the original M3U8 playlist from the server
