@@ -9,13 +9,15 @@ COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
+RUN apt update
+RUN apt install -y curl
 
 # Make port 80 available to the world outside this container
-EXPOSE 5000
+EXPOSE 6000
 
 # Define environment variable
 ENV ENV Dev
 
 # Run app.py when the container launches
-CMD ["python", "mm3.py"]
+CMD ["python", "mm4.py"]
 
