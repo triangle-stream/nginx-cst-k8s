@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mm-deployment
+  namespace: mm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mm
+  template:
+    metadata:
+      labels:
+        app: mm
+    spec:
+      containers:
+      - name: mm-container
+        image: trianglestream/mm:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 6000

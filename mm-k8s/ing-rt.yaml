@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: mm-server
+  namespace: mm
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`dev.trianglestream.com`) && Headers(`X-Test`, `Y`)
+      priority: 10
+      services:
+        - name: mm-deployment-c7fb8b884-2qcnj
+          port: 5000
+  tls:
+    certResolver: default
