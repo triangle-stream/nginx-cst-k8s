@@ -9,10 +9,10 @@ spec:
     - host: dev.trianglestream.com
       http:
         paths:
-          - path: /mm
-            pathType: Exact
+          - path: /
+            pathType: Prefix
             backend:
               service:
-                name:  mm-deployment-c7fb8b884-2qcnj
+                name:  mm-svc
                 port:
                   number: 5000
