@@ -46,5 +46,5 @@ def configure_logging(ip, user_agent):
     root_logger.addHandler(log_handler)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
 
