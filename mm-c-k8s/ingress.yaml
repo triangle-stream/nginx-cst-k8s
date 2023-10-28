@@ -3,7 +3,8 @@ kind: Ingress
 metadata:
   name: mm-c
   namespace: mm-c
-
+  annotations:
+    traefik.frontend.rule: Method:PUT,PATCH,POST
 spec:
   rules:
     - host: mm-c.dev.trianglestream.com

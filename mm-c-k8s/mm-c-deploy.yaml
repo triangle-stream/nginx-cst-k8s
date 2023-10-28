@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mm-c-container
-        image: trianglestream/mm-c:v1.01
+        image: trianglestream/mm-c:v1.02
         imagePullPolicy: Always
         ports:
-        - containerPort: 6000
+        - containerPort: 5050
