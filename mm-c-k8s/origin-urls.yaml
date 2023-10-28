@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  origin_urls.json: |
+    {
+        "0": "http://dev.trianglestream.com:6060",
+        "1": "http://dev.trianglestream.com:6061",
+        "2": "http://dev.trianglestream.com:6062",
+        "3": "http://dev.trianglestream.com:6063"
+    }
+kind: ConfigMap
+metadata:
+  name: origin-urls
+  namespace: mm-c
