@@ -19,7 +19,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: origin-urls
-          mountPath: /app/other
+          mountPath: /app/origin_urls.json
         ports:
         - containerPort: 5050
       volumes:
