@@ -15,11 +15,11 @@ spec:
     spec:
       containers:
       - name: mm-c-container
-        image: trianglestream/mm-c:v1.03
+        image: trianglestream/mm-c:v1.04
         imagePullPolicy: Always
         volumeMounts:
         - name: origin-urls
-          mountPath: /app/origin_urls.json
+          mountPath: /app/origin_urls/
         ports:
         - containerPort: 5050
       volumes:
