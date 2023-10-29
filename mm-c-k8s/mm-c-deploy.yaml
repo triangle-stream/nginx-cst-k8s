@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: mm-c-deployment
   namespace: mm-c
-  config-updated: 0835
 spec:
   replicas: 3
   selector:
@@ -13,6 +12,7 @@ spec:
     metadata:
       labels:
         app: mm-c
+        version: 1-04
     spec:
       containers:
       - name: mm-c-container
