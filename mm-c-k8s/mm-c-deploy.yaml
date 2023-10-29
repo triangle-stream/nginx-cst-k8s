@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: mm-c-deployment
   namespace: mm-c
+  config-updated: 0835
 spec:
   replicas: 3
   selector:
