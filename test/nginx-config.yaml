@@ -8,7 +8,7 @@ data:
         listen       80;
         server_name  _;
         location / {
-            proxy_pass cast.studioraheem.it:8000;
+            proxy_pass cacca.it:8000;
         }
     }
 
